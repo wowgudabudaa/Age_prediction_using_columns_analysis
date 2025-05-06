@@ -1,0 +1,107 @@
+python predict_age_from_GNN_weights_by_distance.py
+Build_graphs: 2110
+Build_graphs: 2363
+Build_graphs: 2373
+Build_graphs: 2386
+Build_graphs: 2390
+Build_graphs: 2231
+Build_graphs: 2402
+Build_graphs: 2410
+Build_graphs: 2421
+Build_graphs: 1912
+Build_graphs: 2424
+Build_graphs: 2446
+Build_graphs: 2451
+Build_graphs: 2485
+Build_graphs: 2473
+Build_graphs: 2491
+Build_graphs: 2506
+Build_graphs: 2524
+Build_graphs: 2535
+Build_graphs: 2654
+Build_graphs: 2666
+Build_graphs: 2690
+Build_graphs: 2695
+Build_graphs: 2715
+Build_graphs: 2720
+Build_graphs: 2737
+Build_graphs: 2753
+Build_graphs: 2227
+Build_graphs: 2765
+Build_graphs: 2771
+Build_graphs: 2781
+Build_graphs: 2802
+Build_graphs: 2804
+Build_graphs: 2813
+Build_graphs: 2817
+Build_graphs: 2840
+Build_graphs: 2877
+Build_graphs: 2898
+Build_graphs: 2926
+Build_graphs: 2938
+Build_graphs: 2939
+Build_graphs: 2954
+Build_graphs: 3010
+Build_graphs: 2320
+Build_graphs: 3028
+Build_graphs: 3033
+Build_graphs: 3034
+Build_graphs: 3045
+Build_graphs: 3069
+Build_graphs: 3225
+Build_graphs: 3265
+Build_graphs: 3293
+Build_graphs: 3308
+Build_graphs: 3343
+Build_graphs: 3350
+Build_graphs: 3378
+Build_graphs: 3391
+Build_graphs: 3847
+Build_graphs: 3866
+Build_graphs: 3889
+Build_graphs: 3896
+Build_graphs: 775
+Build_graphs: 4493
+Build_graphs: 1412
+Build_graphs: 4526
+Build_graphs: 1470
+Build_graphs: 1619
+--- Fold 1 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 1 Validation -> MAE: 13.09, RMSE: 15.63, R2: -0.48
+--- Fold 2 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 2 Validation -> MAE: 12.04, RMSE: 13.59, R2: 0.04
+--- Fold 3 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 3 Validation -> MAE: 11.55, RMSE: 12.82, R2: 0.09
+--- Fold 4 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 4 Validation -> MAE: 11.93, RMSE: 14.07, R2: -0.12
+--- Fold 5 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 5 Validation -> MAE: 13.82, RMSE: 17.92, R2: -0.03
+Build_graphs: 2670
+Build_graphs: 2967
+Build_graphs: 2987
+Build_graphs: 3017
+Build_graphs: 3890
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(

@@ -1,0 +1,534 @@
+--- Fold 1 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+--- Epoch 1 ---
+Loss:  3143.5289713541665
+--- Epoch 2 ---
+Loss:  3087.8487548828125
+--- Epoch 3 ---
+Loss:  3022.132120768229
+--- Epoch 4 ---
+Loss:  3063.7981770833335
+--- Epoch 5 ---
+Loss:  2924.5610148111978
+--- Epoch 6 ---
+Loss:  2941.399454752604
+--- Epoch 7 ---
+Loss:  2807.4906412760415
+--- Epoch 8 ---
+Loss:  2696.6615600585938
+--- Epoch 9 ---
+Loss:  2582.0861002604165
+--- Epoch 10 ---
+Loss:  2616.5232950846353
+--- Epoch 11 ---
+Loss:  2327.2852783203125
+--- Epoch 12 ---
+Loss:  2310.80078125
+--- Epoch 13 ---
+Loss:  2226.2386881510415
+--- Epoch 14 ---
+Loss:  2151.0488891601562
+--- Epoch 15 ---
+Loss:  1856.5801391601562
+--- Epoch 16 ---
+Loss:  1721.9079996744792
+--- Epoch 17 ---
+Loss:  1453.892801920573
+--- Epoch 18 ---
+Loss:  1404.1366882324219
+--- Epoch 19 ---
+Loss:  966.7935384114584
+--- Epoch 20 ---
+Loss:  809.0718282063802
+--- Epoch 21 ---
+Loss:  596.9379272460938
+--- Epoch 22 ---
+Loss:  499.5717493693034
+--- Epoch 23 ---
+Loss:  359.22874959309894
+--- Epoch 24 ---
+Loss:  262.81702009836835
+--- Epoch 25 ---
+Loss:  239.1331583658854
+--- Epoch 26 ---
+Loss:  219.97494252522787
+--- Epoch 27 ---
+Loss:  242.38890584309897
+--- Epoch 28 ---
+Loss:  220.6255874633789
+--- Epoch 29 ---
+Loss:  206.17910512288412
+--- Epoch 30 ---
+Loss:  216.39873504638672
+--- Epoch 31 ---
+Loss:  232.5075480143229
+--- Epoch 32 ---
+Loss:  203.08568700154623
+--- Epoch 33 ---
+Loss:  216.79032389322916
+--- Epoch 34 ---
+Loss:  216.45264307657877
+--- Epoch 35 ---
+Loss:  216.87243143717447
+--- Epoch 36 ---
+Loss:  220.2320810953776
+--- Epoch 37 ---
+Loss:  229.05058161417642
+--- Epoch 38 ---
+Loss:  212.9600372314453
+--- Epoch 39 ---
+Loss:  239.86429087320963
+--- Epoch 40 ---
+Loss:  204.97783660888672
+--- Epoch 41 ---
+Loss:  221.10475413004556
+--- Epoch 42 ---
+Loss:  211.02066548665366
+--- Epoch 43 ---
+Loss:  242.37722524007162
+--- Epoch 44 ---
+Loss:  208.4048754374186
+--- Epoch 45 ---
+Loss:  212.54796091715494
+--- Epoch 46 ---
+Loss:  222.30005645751953
+--- Epoch 47 ---
+Loss:  204.00875854492188
+--- Epoch 48 ---
+Loss:  220.05423736572266
+--- Epoch 49 ---
+Loss:  218.70448303222656
+--- Epoch 50 ---
+Loss:  229.12490717569986
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 1 Validation -> MAE: 13.65, RMSE: 16.22, R2: -0.60
+--- Fold 2 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+--- Epoch 1 ---
+Loss:  2435.507080078125
+--- Epoch 2 ---
+Loss:  2471.8897705078125
+--- Epoch 3 ---
+Loss:  2280.2714233398438
+--- Epoch 4 ---
+Loss:  2375.956583658854
+--- Epoch 5 ---
+Loss:  2144.6837870279946
+--- Epoch 6 ---
+Loss:  2533.9051717122397
+--- Epoch 7 ---
+Loss:  2162.7190958658853
+--- Epoch 8 ---
+Loss:  2137.4784545898438
+--- Epoch 9 ---
+Loss:  2039.6980794270833
+--- Epoch 10 ---
+Loss:  1982.6040852864583
+--- Epoch 11 ---
+Loss:  2028.423095703125
+--- Epoch 12 ---
+Loss:  1840.6042887369792
+--- Epoch 13 ---
+Loss:  1577.5938212076824
+--- Epoch 14 ---
+Loss:  1522.1541137695312
+--- Epoch 15 ---
+Loss:  1283.4649759928386
+--- Epoch 16 ---
+Loss:  1109.9844411214192
+--- Epoch 17 ---
+Loss:  1084.9062398274739
+--- Epoch 18 ---
+Loss:  842.081064860026
+--- Epoch 19 ---
+Loss:  748.4316457112631
+--- Epoch 20 ---
+Loss:  582.8807525634766
+--- Epoch 21 ---
+Loss:  445.31451924641925
+--- Epoch 22 ---
+Loss:  382.556645711263
+--- Epoch 23 ---
+Loss:  263.4153887430827
+--- Epoch 24 ---
+Loss:  275.448299407959
+--- Epoch 25 ---
+Loss:  282.30613072713214
+--- Epoch 26 ---
+Loss:  219.85808690388998
+--- Epoch 27 ---
+Loss:  263.17467880249023
+--- Epoch 28 ---
+Loss:  221.12326049804688
+--- Epoch 29 ---
+Loss:  230.03348286946616
+--- Epoch 30 ---
+Loss:  230.26438903808594
+--- Epoch 31 ---
+Loss:  247.2121556599935
+--- Epoch 32 ---
+Loss:  223.2964121500651
+--- Epoch 33 ---
+Loss:  215.3925584157308
+--- Epoch 34 ---
+Loss:  213.81230862935385
+--- Epoch 35 ---
+Loss:  284.99544525146484
+--- Epoch 36 ---
+Loss:  265.28739166259766
+--- Epoch 37 ---
+Loss:  215.13590876261392
+--- Epoch 38 ---
+Loss:  231.78987757364908
+--- Epoch 39 ---
+Loss:  216.73299662272134
+--- Epoch 40 ---
+Loss:  250.3868840535482
+--- Epoch 41 ---
+Loss:  217.75636672973633
+--- Epoch 42 ---
+Loss:  223.5036875406901
+--- Epoch 43 ---
+Loss:  215.5242919921875
+--- Epoch 44 ---
+Loss:  234.2543462117513
+--- Epoch 45 ---
+Loss:  210.93570137023926
+--- Epoch 46 ---
+Loss:  250.30714416503906
+--- Epoch 47 ---
+Loss:  227.38374837239584
+--- Epoch 48 ---
+Loss:  217.46062978108725
+--- Epoch 49 ---
+Loss:  208.1086565653483
+--- Epoch 50 ---
+Loss:  214.11587142944336
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 2 Validation -> MAE: 12.21, RMSE: 13.88, R2: -0.00
+--- Fold 3 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+--- Epoch 1 ---
+Loss:  2353.582804361979
+--- Epoch 2 ---
+Loss:  2335.2154134114585
+--- Epoch 3 ---
+Loss:  2406.109659830729
+--- Epoch 4 ---
+Loss:  2397.0575358072915
+--- Epoch 5 ---
+Loss:  2122.9908243815103
+--- Epoch 6 ---
+Loss:  2240.3798828125
+--- Epoch 7 ---
+Loss:  2073.883544921875
+--- Epoch 8 ---
+Loss:  2046.3690388997395
+--- Epoch 9 ---
+Loss:  1907.4840901692708
+--- Epoch 10 ---
+Loss:  1883.8794352213542
+--- Epoch 11 ---
+Loss:  1738.4224853515625
+--- Epoch 12 ---
+Loss:  1729.6940612792969
+--- Epoch 13 ---
+Loss:  1484.4794514973958
+--- Epoch 14 ---
+Loss:  1321.4230550130208
+--- Epoch 15 ---
+Loss:  1110.1048431396484
+--- Epoch 16 ---
+Loss:  976.7142740885416
+--- Epoch 17 ---
+Loss:  833.2036794026693
+--- Epoch 18 ---
+Loss:  615.2982126871744
+--- Epoch 19 ---
+Loss:  465.0442810058594
+--- Epoch 20 ---
+Loss:  358.8992284138997
+--- Epoch 21 ---
+Loss:  302.00560760498047
+--- Epoch 22 ---
+Loss:  265.53245798746747
+--- Epoch 23 ---
+Loss:  227.9549700419108
+--- Epoch 24 ---
+Loss:  235.41625467936197
+--- Epoch 25 ---
+Loss:  231.94554392496744
+--- Epoch 26 ---
+Loss:  229.34768422444662
+--- Epoch 27 ---
+Loss:  233.7372703552246
+--- Epoch 28 ---
+Loss:  254.01465606689453
+--- Epoch 29 ---
+Loss:  250.01371892293295
+--- Epoch 30 ---
+Loss:  226.2689348856608
+--- Epoch 31 ---
+Loss:  221.51583607991537
+--- Epoch 32 ---
+Loss:  218.55693562825522
+--- Epoch 33 ---
+Loss:  234.4874610900879
+--- Epoch 34 ---
+Loss:  246.41277058919272
+--- Epoch 35 ---
+Loss:  226.8175786336263
+--- Epoch 36 ---
+Loss:  227.78300984700522
+--- Epoch 37 ---
+Loss:  250.96705373128256
+--- Epoch 38 ---
+Loss:  215.45106601715088
+--- Epoch 39 ---
+Loss:  236.54229227701822
+--- Epoch 40 ---
+Loss:  258.9996846516927
+--- Epoch 41 ---
+Loss:  238.53902180989584
+--- Epoch 42 ---
+Loss:  218.76767094930014
+--- Epoch 43 ---
+Loss:  231.53083038330078
+--- Epoch 44 ---
+Loss:  250.45763651529947
+--- Epoch 45 ---
+Loss:  216.97129185994467
+--- Epoch 46 ---
+Loss:  226.39830017089844
+--- Epoch 47 ---
+Loss:  246.07366307576498
+--- Epoch 48 ---
+Loss:  224.32212702433267
+--- Epoch 49 ---
+Loss:  216.53546778361002
+--- Epoch 50 ---
+Loss:  218.24189376831055
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 3 Validation -> MAE: 11.67, RMSE: 13.02, R2: 0.06
+--- Fold 4 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+--- Epoch 1 ---
+Loss:  2597.5177408854165
+--- Epoch 2 ---
+Loss:  2577.265340169271
+--- Epoch 3 ---
+Loss:  2642.9391072591147
+--- Epoch 4 ---
+Loss:  2400.9703776041665
+--- Epoch 5 ---
+Loss:  2386.1150105794272
+--- Epoch 6 ---
+Loss:  2314.2587687174478
+--- Epoch 7 ---
+Loss:  2245.5743001302085
+--- Epoch 8 ---
+Loss:  2189.6459757486978
+--- Epoch 9 ---
+Loss:  2185.2724812825522
+--- Epoch 10 ---
+Loss:  2029.9915771484375
+--- Epoch 11 ---
+Loss:  2039.8242594401042
+--- Epoch 12 ---
+Loss:  1682.0000406901042
+--- Epoch 13 ---
+Loss:  1469.1028391520183
+--- Epoch 14 ---
+Loss:  1426.5345357259114
+--- Epoch 15 ---
+Loss:  1214.7948201497395
+--- Epoch 16 ---
+Loss:  964.7564900716146
+--- Epoch 17 ---
+Loss:  775.9093424479166
+--- Epoch 18 ---
+Loss:  628.3828379313151
+--- Epoch 19 ---
+Loss:  468.0847473144531
+--- Epoch 20 ---
+Loss:  345.7578582763672
+--- Epoch 21 ---
+Loss:  287.16049575805664
+--- Epoch 22 ---
+Loss:  250.6284090677897
+--- Epoch 23 ---
+Loss:  243.52350107828775
+--- Epoch 24 ---
+Loss:  215.29213587443033
+--- Epoch 25 ---
+Loss:  228.16143290201822
+--- Epoch 26 ---
+Loss:  229.6201629638672
+--- Epoch 27 ---
+Loss:  234.28863906860352
+--- Epoch 28 ---
+Loss:  247.1853370666504
+--- Epoch 29 ---
+Loss:  229.06869761149088
+--- Epoch 30 ---
+Loss:  228.11471048990884
+--- Epoch 31 ---
+Loss:  249.82968393961588
+--- Epoch 32 ---
+Loss:  220.65389506022134
+--- Epoch 33 ---
+Loss:  236.81847127278647
+--- Epoch 34 ---
+Loss:  217.92545064290366
+--- Epoch 35 ---
+Loss:  222.86810557047525
+--- Epoch 36 ---
+Loss:  217.84254455566406
+--- Epoch 37 ---
+Loss:  217.8740323384603
+--- Epoch 38 ---
+Loss:  230.4639434814453
+--- Epoch 39 ---
+Loss:  214.94206619262695
+--- Epoch 40 ---
+Loss:  233.39087295532227
+--- Epoch 41 ---
+Loss:  222.00669606526694
+--- Epoch 42 ---
+Loss:  227.5259666442871
+--- Epoch 43 ---
+Loss:  220.42819213867188
+--- Epoch 44 ---
+Loss:  216.94878387451172
+--- Epoch 45 ---
+Loss:  235.22889200846353
+--- Epoch 46 ---
+Loss:  229.06102498372397
+--- Epoch 47 ---
+Loss:  245.07415262858072
+--- Epoch 48 ---
+Loss:  213.01061248779297
+--- Epoch 49 ---
+Loss:  234.89720026652017
+--- Epoch 50 ---
+Loss:  240.29465866088867
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 4 Validation -> MAE: 12.12, RMSE: 14.40, R2: -0.17
+--- Fold 5 ---
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+--- Epoch 1 ---
+Loss:  2897.9864501953125
+--- Epoch 2 ---
+Loss:  2771.526652018229
+--- Epoch 3 ---
+Loss:  2833.912394205729
+--- Epoch 4 ---
+Loss:  2844.2967936197915
+--- Epoch 5 ---
+Loss:  2678.184041341146
+--- Epoch 6 ---
+Loss:  2615.1360677083335
+--- Epoch 7 ---
+Loss:  2712.101603190104
+--- Epoch 8 ---
+Loss:  2489.4168090820312
+--- Epoch 9 ---
+Loss:  2440.4872436523438
+--- Epoch 10 ---
+Loss:  2261.1143798828125
+--- Epoch 11 ---
+Loss:  2198.9711710611978
+--- Epoch 12 ---
+Loss:  2006.4432779947917
+--- Epoch 13 ---
+Loss:  1902.2957967122395
+--- Epoch 14 ---
+Loss:  1815.7400919596355
+--- Epoch 15 ---
+Loss:  1669.1753336588542
+--- Epoch 16 ---
+Loss:  1440.1314900716145
+--- Epoch 17 ---
+Loss:  1200.4715067545574
+--- Epoch 18 ---
+Loss:  1047.295425415039
+--- Epoch 19 ---
+Loss:  847.9118245442709
+--- Epoch 20 ---
+Loss:  629.6628214518229
+--- Epoch 21 ---
+Loss:  487.9187240600586
+--- Epoch 22 ---
+Loss:  354.3090413411458
+--- Epoch 23 ---
+Loss:  286.71361986796063
+--- Epoch 24 ---
+Loss:  221.96657435099283
+--- Epoch 25 ---
+Loss:  197.50775782267252
+--- Epoch 26 ---
+Loss:  200.98170216878256
+--- Epoch 27 ---
+Loss:  187.5330441792806
+--- Epoch 28 ---
+Loss:  188.85170618693033
+--- Epoch 29 ---
+Loss:  192.4000447591146
+--- Epoch 30 ---
+Loss:  194.64276377360025
+--- Epoch 31 ---
+Loss:  199.9081891377767
+--- Epoch 32 ---
+Loss:  189.88568623860678
+--- Epoch 33 ---
+Loss:  199.40551630655924
+--- Epoch 34 ---
+Loss:  214.39998372395834
+--- Epoch 35 ---
+Loss:  202.3909428914388
+--- Epoch 36 ---
+Loss:  196.2849006652832
+--- Epoch 37 ---
+Loss:  187.1071866353353
+--- Epoch 38 ---
+Loss:  203.5047492980957
+--- Epoch 39 ---
+Loss:  202.63801701863608
+--- Epoch 40 ---
+Loss:  207.02988560994467
+--- Epoch 41 ---
+Loss:  191.79873275756836
+--- Epoch 42 ---
+Loss:  207.58314641316733
+--- Epoch 43 ---
+Loss:  198.53556442260742
+--- Epoch 44 ---
+Loss:  196.44180806477866
+--- Epoch 45 ---
+Loss:  202.16487503051758
+--- Epoch 46 ---
+Loss:  213.5282096862793
+--- Epoch 47 ---
+Loss:  203.48956807454428
+--- Epoch 48 ---
+Loss:  204.5533765157064
+--- Epoch 49 ---
+Loss:  200.99395497639975
+--- Epoch 50 ---
+Loss:  192.4053751627604
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(
+Fold 5 Validation -> MAE: 13.98, RMSE: 18.00, R2: -0.04
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/torch_geometric/deprecation.py:26: UserWarning: 'data.DataLoader' is deprecated, use 'loader.DataLoader' instead
+  warnings.warn(out)
+/home/apps/ubuntu-22.04/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_regression.py:492: FutureWarning: 'squared' is deprecated in version 1.4 and will be removed in 1.6. To calculate the root mean squared error, use the function'root_mean_squared_error'.
+  warnings.warn(

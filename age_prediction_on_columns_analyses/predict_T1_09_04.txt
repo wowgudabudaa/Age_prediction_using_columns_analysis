@@ -1,0 +1,124 @@
+python $PAROS/paros_WORK/hanwen/ad_decode_test/code/predict_T1_from_DWI_patch_rotation.py
+Training model...
+Epoch 1/50, Loss: 0.0149
+Epoch Done: 1
+Epoch 2/50, Loss: 0.0068
+Epoch Done: 2
+Epoch 3/50, Loss: 0.0059
+Epoch Done: 3
+Epoch 4/50, Loss: 0.0055
+Epoch Done: 4
+Epoch 5/50, Loss: 0.0055
+Epoch Done: 5
+Epoch 6/50, Loss: 0.0050
+Epoch Done: 6
+Epoch 7/50, Loss: 0.0051
+Epoch Done: 7
+Epoch 8/50, Loss: 0.0055
+Epoch Done: 8
+Epoch 9/50, Loss: 0.0052
+Epoch Done: 9
+Epoch 10/50, Loss: 0.0048
+Epoch Done: 10
+Epoch 11/50, Loss: 0.0052
+Epoch Done: 11
+Epoch 12/50, Loss: 0.0051
+Epoch Done: 12
+Epoch 13/50, Loss: 0.0049
+Epoch Done: 13
+Epoch 14/50, Loss: 0.0049
+Epoch Done: 14
+Epoch 15/50, Loss: 0.0050
+Epoch Done: 15
+Epoch 16/50, Loss: 0.0048
+Epoch Done: 16
+Epoch 17/50, Loss: 0.0046
+Epoch Done: 17
+Epoch 18/50, Loss: 0.0050
+Epoch Done: 18
+Epoch 19/50, Loss: 0.0048
+Epoch Done: 19
+Epoch 20/50, Loss: 0.0043
+Epoch Done: 20
+Epoch 21/50, Loss: 0.0047
+Epoch Done: 21
+Epoch 22/50, Loss: 0.0044
+Epoch Done: 22
+Epoch 23/50, Loss: 0.0048
+Epoch Done: 23
+Epoch 24/50, Loss: 0.0047
+Epoch Done: 24
+Epoch 25/50, Loss: 0.0045
+Epoch Done: 25
+Epoch 26/50, Loss: 0.0045
+Epoch Done: 26
+Epoch 27/50, Loss: 0.0049
+Epoch Done: 27
+Epoch 28/50, Loss: 0.0046
+Epoch Done: 28
+Epoch 29/50, Loss: 0.0043
+Epoch Done: 29
+Epoch 30/50, Loss: 0.0043
+Epoch Done: 30
+Epoch 31/50, Loss: 0.0044
+Epoch Done: 31
+Epoch 32/50, Loss: 0.0044
+Epoch Done: 32
+Epoch 33/50, Loss: 0.0041
+Epoch Done: 33
+Epoch 34/50, Loss: 0.0047
+Epoch Done: 34
+Epoch 35/50, Loss: 0.0043
+Epoch Done: 35
+Epoch 36/50, Loss: 0.0042
+Epoch Done: 36
+Epoch 37/50, Loss: 0.0043
+Epoch Done: 37
+Epoch 38/50, Loss: 0.0046
+Epoch Done: 38
+Epoch 39/50, Loss: 0.0043
+Epoch Done: 39
+Epoch 40/50, Loss: 0.0044
+Epoch Done: 40
+Epoch 41/50, Loss: 0.0043
+Epoch Done: 41
+Epoch 42/50, Loss: 0.0045
+Epoch Done: 42
+Epoch 43/50, Loss: 0.0043
+Epoch Done: 43
+Epoch 44/50, Loss: 0.0043
+Epoch Done: 44
+Epoch 45/50, Loss: 0.0041
+Epoch Done: 45
+Epoch 46/50, Loss: 0.0046
+Epoch Done: 46
+Epoch 47/50, Loss: 0.0045
+Epoch Done: 47
+Epoch 48/50, Loss: 0.0039
+Epoch Done: 48
+Epoch 49/50, Loss: 0.0042
+Epoch Done: 49
+Epoch 50/50, Loss: 0.0043
+Epoch Done: 50
+
+Generating synthetic T1s for DWI-only subjects...
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S01621_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S02224_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S02266_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S02289_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S02361_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S02469_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S02686_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S02812_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S02842_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S02871_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S03321_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S03394_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S03867_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1_p_r/S04738_predicted_t1_masked_T1.nii.gz
+
+Evaluating model on paired DWI–T1 cases...
+
+ Evaluation complete:
+Mean MAE: 0.0811
+Mean MSE: 0.0086

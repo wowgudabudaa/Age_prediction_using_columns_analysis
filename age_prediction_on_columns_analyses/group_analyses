@@ -1,0 +1,15 @@
+### This is to analyse the data in group
+import numpy as np
+import pandas as pd
+
+# Import columns data
+csv_dir = r'/Volumes/newJetStor/newJetStor/paros/paros_WORK/hanwen/ad_decode_test/output/'
+subject_list = r'/Volumes/newJetStor/newJetStor/paros/paros_WORK/hanwen/ad_decode_test/code/subjects.txt'
+subject_group = r'/Users/bass/Desktop/HanwenLin/AD_DECODE_data3.xlsx'
+
+# Read subject_list to get the subjects indexes
+with open(subject_list, 'r') as f:
+    subjects = f.readlines()
+
+# Read subject_group to get subjects groups
+ad_decode_data2 = pd.read_excel(subject_group, sheet_name='AD_DECODE_data2')

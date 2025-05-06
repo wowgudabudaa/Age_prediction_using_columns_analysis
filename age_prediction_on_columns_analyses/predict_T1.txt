@@ -1,0 +1,63 @@
+Training model...
+Epoch 1/20, Loss: 0.0161
+Epoch Done: 1
+Epoch 2/20, Loss: 0.0033
+Epoch Done: 2
+Epoch 3/20, Loss: 0.0030
+Epoch Done: 3
+Epoch 4/20, Loss: 0.0027
+Epoch Done: 4
+Epoch 5/20, Loss: 0.0027
+Epoch Done: 5
+Epoch 6/20, Loss: 0.0025
+Epoch Done: 6
+Epoch 7/20, Loss: 0.0024
+Epoch Done: 7
+Epoch 8/20, Loss: 0.0024
+Epoch Done: 8
+Epoch 9/20, Loss: 0.0023
+Epoch Done: 9
+Epoch 10/20, Loss: 0.0025
+Epoch Done: 10
+Epoch 11/20, Loss: 0.0022
+Epoch Done: 11
+Epoch 12/20, Loss: 0.0023
+Epoch Done: 12
+Epoch 13/20, Loss: 0.0022
+Epoch Done: 13
+Epoch 14/20, Loss: 0.0022
+Epoch Done: 14
+Epoch 15/20, Loss: 0.0022
+Epoch Done: 15
+Epoch 16/20, Loss: 0.0022
+Epoch Done: 16
+Epoch 17/20, Loss: 0.0024
+Epoch Done: 17
+Epoch 18/20, Loss: 0.0022
+Epoch Done: 18
+Epoch 19/20, Loss: 0.0022
+Epoch Done: 19
+Epoch 20/20, Loss: 0.0025
+Epoch Done: 20
+
+Generating synthetic T1s for DWI-only subjects...
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S01621_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S02224_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S02266_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S02289_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S02361_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S02469_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S02686_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S02812_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S02842_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S02871_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S03321_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S03394_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S03867_predicted_t1_masked_T1.nii.gz
+Saved: /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/input/predicted_T1/S04738_predicted_t1_masked_T1.nii.gz
+
+Evaluating model on paired DWI–T1 cases...
+
+ Evaluation complete:
+Mean MAE: 0.0262
+Mean MSE: 0.0024

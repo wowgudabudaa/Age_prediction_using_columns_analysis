@@ -1,0 +1,12 @@
+ython /mnt/newStor/paros//paros_WORK/hanwen/ad_decode_test/code/predict_age_from_columns.py
+Using device: cuda
+Fold 1
+MAE: 14.12, RMSE: 302.72, R²: 0.04
+Fold 2
+MAE: 11.99, RMSE: 185.77, R²: 0.11
+Fold 3
+MAE: 12.55, RMSE: 206.68, R²: -0.13
+Fold 4
+MAE: 16.27, RMSE: 343.78, R²: -0.46
+Fold 5
+MAE: 11.27, RMSE: 207.18, R²: -0.01

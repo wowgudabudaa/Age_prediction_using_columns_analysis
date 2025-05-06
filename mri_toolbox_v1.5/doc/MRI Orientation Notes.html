@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<title>MRI Orientation Notes</title>
+<meta name="author" content="Darren Weber">
+<link href="../styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h1>MRI Orientation Notes</h1>
+<p>The mri_toolbox download at 
+<a href="http://eeg.sourceforge.net">http://eeg.sourceforge.net</a>
+contains matlab code that employs the orient header field to read and 
+orthotransform ANALYZE volumes (see the avw* functions).  In this code 
+you will find complete documentation of the XYZ directions for all 
+6 orthogonal orientations (see avw_img_read.m).</p>
+
+<p>The default ANALYZE orientation is LAS, +X is <u>L</u>eft, +Y is <u>A</u>nterior, 
++Z is <u>S</u>uperior.  This corresponds to avw.hdr.hist.orient=0, transverse unflipped.
+This is the radiological orientation.  The neurological convention is RAS, so 
+the direction of X is swapped.  The standard analyze format does not support
+this orientation in the hdr.hist.orient field.</p>
+
+<p>This toolbox will try to load an Analyze volume as an LAS volume, so
+long as the avw.hdr.hist.orient field is set correctly.  Thus, the avw_view
+function should always present the volume in LAS (radiological) orientation (a
+GUI control allows easy flipping for viewing purposes).  If you need to, there
+you can use avw_flip to orthoflip any dimension, although this could easily
+invalidate the Analyze coordinate system.</p>
+
+<p>The avw.hdr.hist.orient field is "optional" and not all software will read
+or write it correctly.  For example, <a href="http://www.sensor.com">MEDx</a>
+will set an unused header field.</p>
+
+<p>Furthermore, the flipped orientations (orient values 3-5) are only defined in
+Analyze to support a movie animation.  The flipping is not done in the slice
+direction, but rather in the dimension that suits raster graphics.  The flipping
+has NO relationship to the actual orientation of the volume, only to how the data
+is handled during graphics processes.  Thus, orient values 3-5 are NOT RECOMMENDED.
+For example, for a transverse LAS volume, the orient=3 option flips to the 
+anterior-posterior direction (LPS), which does not provide for saving RAS 
+volumes.  Nevertheless, this toolbox will attempt to handle the flipped Analyze
+volumes correctly.</p>
+
+<p>If your not sure what the orientation of a volume is, it is near impossible
+to differentiate LAS from RAS without landmarks in the image.  A useful tool is
+the flip L/R control in avw_view.  It will allow you to quickly flip left/right
+to find visual cues that differentiate these two orientations.  Some high 
+resolution T1 anatomical data I have worked with was acquired with a small 
+pinpoint artifact in the central voxel of the left most slice of the volume 
+(what a great idea! except when it comes to intensity normalisation!).  It's
+also possible to use radiological markers (a preferable method, perhaps, as it
+should avoid the above intensity artifact when normalising or correcting Bo field 
+distortions).  If that information is not available to you, but you have the
+original scanner files, you can try to use <a href="http://xmedcon.sourceforge.net">
+http://xmedcon.sourceforge.net</a> to read the original scanner volume headers, 
+which usually contain useful orientation information, if you can interpret it
+(maybe speak to your radiographer).  You might then use (X)medcon to convert
+the original data to ANALYZE, in a specific orientation.  Keep careful track
+of how the orientation, especially left/right changes during this
+conversion.  Also consider acquisition of a small phantom volume, containing
+RAS orientation markers, in the sequence you use for your subject data.  You
+can then process that volume through all the stages of your analyses to
+confirm what the final result orientation is.</p>
+
+<p>All the best getting it right.  The orientation issue has been a real issue
+for me, hence the development of the tools.  After better understanding how 
+it all works, the anxiety starts to dissipate ;-)  It's frustrating that our 
+visuo-spatial intelligence for 3D object orientation virtually goes 
+out the window when looking at ortho slices!  In reality, we know this 
+is a simple problem, yet the ortho views are unyielding!</p>
+
+<p></p>
+<script language="JavaScript" type="text/javascript">
+<!--
+     document.write("<p><p><hr>Last Modified " + document.lastModified)
+// -->
+</script>
+<p><br>
+Darren Weber, PhD Student<br>
+Cognitive Neuroscience, School of Psychology<br>
+Flinders University of SA, GPO Box 2100, Adelaide, SA 5001, Aust.<br>
+Ph:  (61 8) 8201 3889, Fax: (61 8) 8201 3877<br>
+<a href="http://203.3.164.46/~dlw/homepages/index.html">
+http://203.3.164.46/~dlw/homepages/index.html</a></p>
+
+</body>
+</html>
