@@ -61,7 +61,7 @@ The model is a 3-layer Graph Convolutional Network (GCN) designed for processing
 - **Batch size**: 6
 - **Epochs**: up to 300 per repetition.
 
-#### ⚙ Training Details
+#### Training Details
 
 - **Optimizer**: `AdamW` with learning rate `0.002` and `weight_decay=1e-4`
 - **Scheduler**: `StepLR(step_size=20, gamma=0.5)`
