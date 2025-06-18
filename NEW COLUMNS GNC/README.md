@@ -1,4 +1,4 @@
-# Brain Age Prediction from Cortical Columns using GCN
+# 1_ Brain Age Prediction from Cortical Columns using GCN
 
 This project builds a graph-based machine learning pipeline to predict brain age from cortical columns.  We use mean diffusivity (MD) values,the mean for each column, construct KNN-based graphs, and train a GCN model.
 
@@ -99,3 +99,16 @@ After cross-validation, a final model is trained on **all healthy + familial-ris
 - Same architecture, optimizer, scheduler, and loss function as in CV.
   
 - READY TO BE APPLIED TO ALL RISKS...
+
+
+
+# 2_ Apply pretrained model on all healthy to all risk subjects.
+-Get age, predicted age, BAG and cBAG
+-Plot BAG and cBAG vs chronological age
+-Violin plots-> BAG and cBAG vs Risk group, genotype and E4+/E4-
+-*To do statistical tests
+
+# 3_Metrics binary
+-Compute AUC, Recall, F1Score, Precission, accuracy, ROC curve
+-> 0 and best youden th
+
