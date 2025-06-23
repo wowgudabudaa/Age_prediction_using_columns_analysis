@@ -1,0 +1,9 @@
+torch==2.5.1
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+networkx
+openpyxl
+torch-geometric
