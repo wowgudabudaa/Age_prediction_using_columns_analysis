@@ -1,6 +1,6 @@
 # COLUMNS MEAN
 
-#Healthy
+# Healthy
 
 import os  # For handling file paths and directories
 import pandas as pd  # For working with tabular data using DataFrames

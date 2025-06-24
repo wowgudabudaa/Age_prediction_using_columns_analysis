@@ -573,6 +573,102 @@ plt.ylabel("Corrected Brain Age Gap (cBAG)")
 plt.tight_layout()
 plt.show()
 
+# Saliency maps
+import torch
+import torch.nn.functional as F
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+from sklearn.metrics import pairwise_distances
 
 
+# === Function to compute saliency maps ===
+
+def compute_saliency_map(model, data, target_class=None):
+    """
+    Computes the saliency map for a given graph data.
+
+    Args:
+        model (torch.nn.Module): Trained model.
+        data (torch_geometric.data.Data): Graph data.
+        target_class (int, optional): Class index to compute saliency for. If None, uses the model's output.
+
+    Returns:
+        saliency_map (np.ndarray): Saliency map for the graph.
+    """
+    # Set model to evaluation mode
+    model.eval()
+
+    # Forward pass
+    data = data.to(device)
+    output = model(data)
+
+    # If target_class is not provided, use the model's output
+    if target_class is None:
+        target_class = output.argmax(dim=1).item()
+
+    # Zero gradients
+    model.zero_grad()
+
+    # Backward pass to compute gradients
+    output[0].backward()
+
+    # Get gradients and convert to numpy
+    gradients = data.x.grad.cpu().numpy()
+    saliency_map = np.abs(gradients).sum(axis=1)  # Sum gradients across features
+
+    return saliency_map
+
+# === Function to visualize saliency map ===
+def visualize_saliency_map(saliency_map, title="Saliency Map"):
+    """
+    Visualizes the saliency map as a heatmap.
+
+    Args:
+        saliency_map (np.ndarray): Saliency map to visualize.
+        title (str, optional): Title of the plot.
+    """
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(saliency_map.reshape(1, -1), cmap="viridis", cbar=True, xticklabels=False, yticklabels=False)
+    plt.title(title)
+    plt.xlabel("Features")
+    plt.ylabel("Saliency")
+    plt.tight_layout()
+    plt.show()
+
+# === Function to visualize saliency map with PCA ===
+def visualize_saliency_map_pca(saliency_map, title="Saliency Map (PCA)"):
+    """
+    Visualizes the saliency map after applying PCA.
+
+    Args:
+        saliency_map (np.ndarray): Saliency map to visualize.
+        title (str, optional): Title of the plot.
+    """
+    # Apply PCA to reduce dimensionality
+    pca = PCA(n_components=2)
+    saliency_map_pca = pca.fit_transform(saliency_map.reshape(-1, 1))
+
+    plt.figure(figsize=(8, 6))
+    sns.scatterplot(x=saliency_map_pca[:, 0], y=saliency_map_pca[:, 1], cmap="viridis")
+    plt.title(title)
+    plt.xlabel("PCA Component 1")
+    plt.ylabel("PCA Component 2")
+    plt.tight_layout()
+    plt.show()
+
+
+# Choose a subject's graph
+subject_graph = graph_data_list_all[0]  # Replace with the desired subject's graph
+subject_graph = subject_graph.to(device)  # Move to device
+subject_graph.x.requires_grad = True  # Enable gradients for features
+# Compute saliency map
+saliency_map = compute_saliency_map(model, subject_graph)
+# Visualize saliency map
+visualize_saliency_map(saliency_map, title="Saliency Map for Subject " + str(subject_graph.subject_id))
+# Visualize saliency map with PCA
+visualize_saliency_map_pca(saliency_map, title="Saliency Map (PCA) for Subject " + str(subject_graph.subject_id))
 
