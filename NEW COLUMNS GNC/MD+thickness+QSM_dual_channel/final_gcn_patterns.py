@@ -233,6 +233,9 @@ if __name__ == "__main__":
     patterns_summary = pd.DataFrame(0.0, index=subject_ids,
                                     columns=[f'md_pattern_{i}' for i in range(128)]
                                     + [f'qsm_pattern_{i}' for i in range(128)])
+    md_summary = pd.DataFrame(0.0, index=subject_ids, columns=[f'md_pattern_{i}' for i in range(128)])
+    qsm_summary = pd.DataFrame(0.0, index=subject_ids, columns=[f'qsm_pattern_{i}' for i in range(128)])
+
     for fold in range(k):
         test_idx  = np.loadtxt(f"../set_split/test_indices_fold_{fold}.csv",
                                delimiter=",").astype(np.int64)
@@ -243,7 +246,11 @@ if __name__ == "__main__":
         for i, sid in enumerate(subj_ids):
             patterns_summary.loc[sid, [f'md_pattern_{j}' for j in range(128)]] += avg_md_graph[i]
             patterns_summary.loc[sid, [f'qsm_pattern_{j}' for j in range(128)]] += avg_qsm_graph[i]
+            md_summary.loc[sid, [f'md_pattern_{j}' for j in range(128)]] += avg_md_graph[i]
+            qsm_summary.loc[sid, [f'qsm_pattern_{j}' for j in range(128)]] += avg_qsm_graph[i]
 
     patterns_summary.to_csv(f'{save_dir}/final_graph_patterns_summary.csv')
+    md_summary.to_csv(f'{save_dir}/md_graph_patterns_summary.csv')
+    qsm_summary.to_csv(f'{save_dir}/qsm_graph_patterns_summary.csv')
 
     print("Extraction completed. Graph-level patterns saved.")
