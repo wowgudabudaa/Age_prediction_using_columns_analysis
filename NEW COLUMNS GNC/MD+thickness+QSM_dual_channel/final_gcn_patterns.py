@@ -158,12 +158,16 @@ def extract_last_layer_patterns(model, loader, device='cuda'):
 
 # ========== USAGE EXAMPLE ==========
 if __name__ == "__main__":
-    save_dir = "extracted_patterns"
+    # save_dir = "extracted_patterns"
+    save_dir = "extracted_patterns_MCI_AD"
     os.makedirs(save_dir, exist_ok=True)
 
     # Load the graph data lists from the saved files for later use
-    graph_data_list_md = torch.load("processed_graph_data/graph_data_list_md.pt")
-    graph_data_list_QSM = torch.load("processed_graph_data/graph_data_list_QSM.pt")
+    # graph_data_list_md = torch.load("processed_graph_data/graph_data_list_md.pt")
+    # graph_data_list_QSM = torch.load("processed_graph_data/graph_data_list_QSM.pt")
+    graph_data_list_md = torch.load("processed_graph_data/graph_data_list_md_MCI_AD.pt")
+    graph_data_list_QSM = torch.load("processed_graph_data/graph_data_list_QSM_MCI_AD.pt")
+
     # Create lookup dictionary from subject IDs to their graphs
     md_dict = {data.subject_id: data for data in graph_data_list_md}
     qsm_dict = {data.subject_id: data for data in graph_data_list_QSM}
@@ -184,13 +188,14 @@ if __name__ == "__main__":
 
     for fold in range(k):
         print(f"Processing fold {fold + 1}/{k}...")
-        train_idx = np.loadtxt(f"../set_split/train_indices_fold_{fold}.csv",
-                               delimiter=",").astype(np.int64)
-        test_idx = np.loadtxt(f"../set_split/test_indices_fold_{fold}.csv",
-                              delimiter=",").astype(np.int64)
+        # train_idx = np.loadtxt(f"../set_split/train_indices_fold_{fold}.csv",
+        #                        delimiter=",").astype(np.int64)
+        # test_idx = np.loadtxt(f"../set_split/test_indices_fold_{fold}.csv",
+        #                       delimiter=",").astype(np.int64)
 
-        train_data = [aligned_graph_list[i] for i in train_idx]
-        test_data = [aligned_graph_list[i] for i in test_idx]
+        # train_data = [aligned_graph_list[i] for i in train_idx]
+        # test_data = [aligned_graph_list[i] for i in test_idx]
+        test_data = aligned_graph_list
 
         for rep in range(repeats_per_fold):
 
@@ -229,7 +234,8 @@ if __name__ == "__main__":
         np.save(f'{save_dir}/avg_qsm_graph_patterns_fold_{fold+1}.npy', avg_qsm_graph)
 
     # Build patterns summary for all subjects
-    subject_ids = pd.read_csv("healthy_familial_subject_ids.csv", header=None, dtype=str)[0].tolist()
+    # subject_ids = pd.read_csv("healthy_familial_subject_ids.csv", header=None, dtype=str)[0].tolist()
+    subject_ids = pd.read_csv("filtered_MCI_AD_subject_ids.csv", header=None, dtype=str)[0].tolist()
     patterns_summary = pd.DataFrame(0.0, index=subject_ids,
                                     columns=[f'md_pattern_{i}' for i in range(128)]
                                     + [f'qsm_pattern_{i}' for i in range(128)])
@@ -237,9 +243,10 @@ if __name__ == "__main__":
     qsm_summary = pd.DataFrame(0.0, index=subject_ids, columns=[f'qsm_pattern_{i}' for i in range(128)])
 
     for fold in range(k):
-        test_idx  = np.loadtxt(f"../set_split/test_indices_fold_{fold}.csv",
-                               delimiter=",").astype(np.int64)
-        subj_ids = [subject_ids[i] for i in test_idx]
+        # test_idx  = np.loadtxt(f"../set_split/test_indices_fold_{fold}.csv",
+        #                        delimiter=",").astype(np.int64)
+        # subj_ids = [subject_ids[i] for i in test_idx]
+        subj_ids = subject_ids
         avg_md_graph = np.load(f'{save_dir}/avg_md_graph_patterns_fold_{fold+1}.npy')  # shape (n_subjects, 128)
         avg_qsm_graph = np.load(f'{save_dir}/avg_qsm_graph_patterns_fold_{fold+1}.npy')
 
@@ -248,6 +255,11 @@ if __name__ == "__main__":
             patterns_summary.loc[sid, [f'qsm_pattern_{j}' for j in range(128)]] += avg_qsm_graph[i]
             md_summary.loc[sid, [f'md_pattern_{j}' for j in range(128)]] += avg_md_graph[i]
             qsm_summary.loc[sid, [f'qsm_pattern_{j}' for j in range(128)]] += avg_qsm_graph[i]
+
+    # For MCI and AD, average across folds
+    patterns_summary /= k
+    md_summary /= k
+    qsm_summary /= k
 
     patterns_summary.to_csv(f'{save_dir}/final_graph_patterns_summary.csv')
     md_summary.to_csv(f'{save_dir}/md_graph_patterns_summary.csv')
