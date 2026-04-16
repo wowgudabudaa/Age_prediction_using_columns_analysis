@@ -4,25 +4,31 @@ from sklearn.exceptions import ConvergenceWarning
 from sklearn.linear_model import LinearRegression, Lasso
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-import statsmodels.api as sm
 from statsmodels.stats.multitest import multipletests
 import os
 import warnings
-import numpy as np
 from scipy.stats import pearsonr
 
 
 # Define config parameters
-analyse_cognitive = True
-analyse_biological = True
-analyse_volumes = True
-patterns_dir = 'extracted_patterns/md_graph_patterns_summary.csv'
-save_dir = 'patterns_analysis_results_md'
+analyse_cognitive = False
+analyse_biological = False
+analyse_volumes = False
+group_t_test = True
+modality = "md"  # or "qsm"
+
+patterns_dir = f'extracted_patterns/{modality}_graph_patterns_summary.csv'
+patterns_MCI_AD_dir = f'extracted_patterns_MCI_AD/{modality}_graph_patterns_summary.csv'
+save_dir = f'patterns_analysis_results_{modality}_MCI_AD'
+
 metadata_path = "biological_metrics_MCIandAD/merged_results_with_metadata.csv"
 vol_path = "../../normalized_regional_volumes.csv"
 
 # Load gcn patterns
 patterns_summary = pd.read_csv(patterns_dir, index_col=0)  # (N, 256) with subject IDs as index
+patterns_summary_MCI_AD = pd.read_csv(patterns_MCI_AD_dir, index_col=0)  # (N, 256) with subject IDs as index
+# Concatenate patterns_summary_MCI_AD into patterns_summary
+patterns_summary = pd.concat([patterns_summary, patterns_summary_MCI_AD], axis=0)
 
 # Load cognitive scores and biological metrics
 df = pd.read_csv(metadata_path, header=0) # (N, metrics)
@@ -70,12 +76,12 @@ def evaluate_regression(X, y, n_permutations=1000, random_state=42):
     return: (mean Pearson r, MAE, RMSE, R², permutation p-value)
     """
     print("regression evaluation...")
-    
+
     # check if y is constant
     if np.std(y) == 0:
         print("Warning: target variable y is constant. All metrics are meaningless.")
         return (0.0, 0.0, 0.0, 0.0, 1.0)
-    
+
     model = Lasso(alpha=0.1, max_iter=10000)
     model.fit(X, y)
     print("regression fitted...")
@@ -96,7 +102,7 @@ def evaluate_regression(X, y, n_permutations=1000, random_state=42):
     np.random.seed(random_state)
     perm_r = []
     n = len(y)
-    
+
     for i in range(n_permutations):
         # permute the target variable
         y_perm = np.random.permutation(y)
@@ -115,6 +121,10 @@ def evaluate_regression(X, y, n_permutations=1000, random_state=42):
 
     return (r_orig, mae, rmse, r2, p_perm)
 
+def group_t_test(group1, group2):
+    from scipy.stats import ttest_ind
+    t_stat, p_value = ttest_ind(group1, group2, equal_var=False)
+    return t_stat, p_value
 
 os.makedirs(save_dir, exist_ok=True)
 scaler = StandardScaler()
@@ -220,3 +230,29 @@ if analyse_volumes:
     results_df['Significant'] = reject
     results_df.to_csv(f'{save_dir}/regression_results_regional_volumes.csv', index=False)
     print("Results saved for regional volumes")
+
+group_type1 = {'sex': ['M', 'F']}
+group_type2 = {'APOE4': [0, 1]}
+
+if group_t_test:
+    for group_col, group_vals in group_type1.items():
+        print(f"\nPerforming t-tests for {group_col}...")
+        group1 = patterns_summary[df[group_col] == group_vals[0]]
+        group2 = patterns_summary[df[group_col] == group_vals[1]]
+        t_stat, p_value = group_t_test(group1.values.flatten(), group2.values.flatten())
+        print(f"T-test for {group_col}: t-statistic = {t_stat:.4f}, p-value = {p_value:.4f}")
+        pd.DataFrame({
+            'Group': [group_vals[0], group_vals[1]],
+            'Mean_Pattern_Value': [group1.values.flatten().mean(), group2.values.flatten().mean()]
+        }).to_csv(f'{save_dir}/t_test_{group_col}.csv', index=False)
+
+    for group_col, group_vals in group_type2.items():
+        print(f"\nPerforming t-tests for {group_col}...")
+        group1 = patterns_summary[df[group_col] == group_vals[0]]
+        group2 = patterns_summary[df[group_col] == group_vals[1]]
+        t_stat, p_value = group_t_test(group1.values, group2.values.flatten())
+        print(f"T-test for {group_col}: t-statistic = {t_stat:.4f}, p-value = {p_value:.4f}")
+        pd.DataFrame({
+            'Group': [group_vals[0], group_vals[1]],
+            'Mean_Pattern_Value': [group1.values.flatten().mean(), group2.values.flatten().mean()]
+        }).to_csv(f'{save_dir}/t_test_{group_col}.csv', index=False)
